@@ -1,4 +1,3 @@
-```markdown
 # Lab: User Management and Display
 
 In this lab, I will apply what we learned about setting up Models, Templates, and Views in Django.
@@ -98,4 +97,3 @@ By completing this lab, I will have set up a simple user management feature that
 - Creating a custom model and populating it with fake data.
 - Registering the model in the admin interface.
 - Displaying a list of users on a webpage using Django templates and views.
-``` 

@@ -3,35 +3,25 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Users List</title>
-        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+        <title>Users</title>
+        <link rel="stylesheet" href="{% static 'style.css' %}">
     </head>
     <body>
-        <div class="container">
-            <h2 class="text-center mt-4">
-                Here are the users
-            </h2>
-        </div>
-        <div class="container">
+        <h1>Here are your users:</h1>
+        <div>
             {% if users %}
-            <table class="table table-striped">
-                <thead>
-                    <tr>
-                        <th>First Name</th>
-                        <th>Last Name</th>
-                        <th>Email</th>
-                    </tr>
-                </thead>
-                <tbody>
+                <ol>
                     {% for user in users %}
-                        <tr>
-                            <td>{{ user.first_name }}</td>
-                            <td>{{ user.last_name }}</td>
-                            <td>{{ user.email }}</td>
-                        </tr>
+                        <li>
+                            <strong>User Info</strong>
+                            <ul>
+                                <li>First Name: {{ user.first_name }}</li>
+                                <li>Last Name: {{ user.last_name }}</li>
+                                <li>Email: {{ user.email }}</li>
+                            </ul>
+                        </li>
                     {% endfor %}
-                </tbody>
-            </table>
+                </ol>
             {% else %}
                 <p>No users available</p>
             {% endif %}

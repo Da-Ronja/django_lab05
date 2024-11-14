@@ -4,7 +4,7 @@ from .models import User
 
 # Create your views here.
 def index(request):
-    return HttpResponse("Hello, world. You're at the users index.")
+    return render(request, 'users/index.html')
 
 def user_list(request):
     user_list = User.objects.order_by('last_name')
